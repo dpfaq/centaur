@@ -1,21 +1,15 @@
-# Data-centric Federated Learning
-This repository is dedicated to open-sourcing our works in Federated Learning, emphasizing data-centric methodologies.
+See `frameworks/centaur` for **Centaur** framework.
 
 
-# Frameworks:
-
-## List:
-
-The source code associated with our frameworks, presented in our published papers or preprints:
-
-1. See `frameworks/centaur` for **Centaur** framework presented in "[Enhancing Efficiency in Multidevice Federated Learning through Data Selection](https://arxiv.org/abs/2211.04175)"
-
-> The primary version of this work has been presented in ICLR Workshop on Machine Learning for IoT: Datasets, Perception, and Understanding -- Centaur: Federated Learning for Constrained Edge Devices: https://arxiv.org/abs/2211.04175v3
-
-### (1) Centaur
-
-#### Abstract
-Federated learning (FL) in multidevice environments creates new opportunities to learn from a vast and diverse amount of private data. Although personal devices capture valuable data, their memory, computing, connectivity, and battery resources are often limited. Since deep neural networks (DNNs) are the typical machine learning models employed in FL, there are demands for integrating ubiquitous constrained devices into the training process of DNNs. In this paper, we develop an FL framework to incorporate on-device data selection on such constrained devices, which allows partition-based training of a DNN through collaboration between constrained devices and resourceful devices of the same client. Evaluations on five benchmark DNNs and six benchmark datasets across different modalities show that, on average, our framework achieves ~19% higher accuracy and ~58% lower latency; compared to the baseline FL without our implemented strategies. We demonstrate the effectiveness of our FL framework when dealing with imbalanced data, client participation heterogeneity, and various mobility patterns. 
+Ubiquitous devices, such as sensing wearables or mobile cameras, provide access to a diverse set of data. However,
+the mobility demand for ubiquitous devices naturally imposes constraints on their computational and communication capabilities.
+An emerging approach is to locally learn knowledge from data captured by ubiquitous constrained devices (UCDs), rather
+than to store and transmit the data in its original form. In this paper, we develop a federated learning framework, called
+Centaur, to incorporate on-device data selection on UCDs, which allows partition-based training of a deep neural network through
+collaboration between a constrained device and a resourceful device within the multidevice ecosystem of the same user. We
+evaluate on five benchmark models and six benchmark datasets that include image and wearable sensor data. On average,
+Centaur achieves ∼19% higher accuracy and ∼58% lower latency; compared to the baseline. Moreover, we evaluate Centaur when dealing with imbalanced non-iid data, client participation
+heterogeneity, and mobility patterns.
 
 ![](./figs/centaur/_overview.png)
 
@@ -34,24 +28,6 @@ Federated learning (FL) in multidevice environments creates new opportunities to
         ii. Set up the desired parameters in `unning_args.py`
         ii. Run `python main.py`
 (c) For replicating some of the results, run the following command to generate bash scripts: `python make_script.py` and then run specific `.sh` file.
-
-
-#### Citation
-Please use:
-
-```bibtex
-@misc{mo2024enhancing,
-      title={Enhancing Efficiency in Multidevice Federated Learning through Data Selection}, 
-      author={Fan Mo and Mohammad Malekzadeh and Soumyajit Chatterjee and Fahim Kawsar and Akhil Mathur},
-      year={2024},
-      eprint={2211.04175},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
-
-
-
 
 
         
